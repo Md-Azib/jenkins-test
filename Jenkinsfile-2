@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        echo "${TEST_LIQUIBASE_USER}"
+        echo "${env.TEST_LIQUIBASE_USER}"
       }
     }
   }

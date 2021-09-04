@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh 'printenv | sort'
+        sh 'pwd'
       }
     }
   }

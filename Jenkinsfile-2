@@ -5,12 +5,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh 'liquibase status --url="jdbc:mysql://"$TEST_LIQUIBASE_URL+":"+$TEST_LIQUIBASE_PORT+"/"$TEST_LIQUIBASE_DATABASE --changeLogFile=my_app-wrapper.xml --username=$TEST_LIQUIBASE_USER --password=$TEST_LIQUIBASE_PASS'
-      }
-    }
-    stage('Update') {
-      steps {
-        sh 'liquibase update --url="jdbc:mysql://"$TEST_LIQUIBASE_URL+":"+$TEST_LIQUIBASE_PORT+"/"$TEST_LIQUIBASE_DATABASE --changeLogFile=my_app-wrapper.xml --username=$TEST_LIQUIBASE_USER --password=$TEST_LIQUIBASE_PASS'
+        echo "${TEST_LIQUIBASE_USER}"
       }
     }
   }

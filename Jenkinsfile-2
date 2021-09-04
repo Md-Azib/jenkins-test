@@ -5,8 +5,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        echo "${env.TEST_LIQUIBASE_USER}"
-        env
+        sh "printenv | sort"
       }
     }
   }

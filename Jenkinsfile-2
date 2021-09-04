@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        . ./Users/md.azib/environment.sh
+        echo $pwd; ls .
       }
     }
   }

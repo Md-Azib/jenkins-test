@@ -9,7 +9,7 @@ pipeline {
     stage('Status') {
       steps {
         sh 'chmod +x properties.env'
-        sh './properties.env'
+        sh 'source ./properties.env'
         sh 'echo $TEST_LIQUIBASE_URL'
         sh 'python3 prog.py'
       }

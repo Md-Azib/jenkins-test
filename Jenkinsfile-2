@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh 'chmod +x jenkins'
+        sh 'chmod +x properties.env'
         sh './properties.env'
         sh 'python3 prog.py'
       }

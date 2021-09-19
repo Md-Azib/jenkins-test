@@ -8,6 +8,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
+        sh "chmod +x -R ${env.WORKSPACE}"
         sh './properties.env'
         sh 'python3 prog.py'
       }

@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh '. /Users/md.azib/Documents/TestRepository/jenkins-test/properties.env'
+        sh './properties.env'
         sh 'python3 prog.py'
       }
     }

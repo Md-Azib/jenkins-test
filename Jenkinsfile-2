@@ -10,7 +10,6 @@ pipeline {
       steps {
         sh 'chmod +x properties.env'
         sh '. ./properties.env'
-        sh 'echo $TEST_LIQUIBASE_URL'
         sh 'python3 prog.py'
       }
     }

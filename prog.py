@@ -1,6 +1,7 @@
 import os
 
-os.system('source /Users/md.azib/Documents/TestRepository/jenkins-test/properties.env')
+print(os.system('pwd'))
+os.system('. ./properties.env')
 
 URL = os.environ['TEST_LIQUIBASE_URL']
 PORT = os.environ['TEST_LIQUIBASE_PORT']

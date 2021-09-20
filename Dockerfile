@@ -9,8 +9,6 @@ TEST_LIQUIBASE_PASS=root
 
 USER root
 RUN mkdir -p /home/app
-RUN chown newuser /home/app
-USER newuser
 
 COPY prog.py /home/app
 

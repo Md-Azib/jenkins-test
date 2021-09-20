@@ -1,7 +1,6 @@
 import os
 
 print(os.system('pwd'))
-exec(open('properties.env').read())
 
 URL = os.environ['TEST_LIQUIBASE_URL']
 PORT = os.environ['TEST_LIQUIBASE_PORT']

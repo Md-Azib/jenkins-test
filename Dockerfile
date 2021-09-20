@@ -8,8 +8,9 @@ TEST_LIQUIBASE_USER=root \
 TEST_LIQUIBASE_PASS=root
 
 USER root
-RUN mkdir -p /home/app
 
-COPY prog.py /home/app
+WORKDIR /usr/local/bin
 
-CMD ["python", "/home/app/prog.py"]
+COPY prog.py .
+
+CMD ["prog.py"]

@@ -1,15 +1,11 @@
 pipeline {
   agent {
-    docker { 
-      image 'liquibase/liquibase:4.4.2'
-    }
+    dockerfile true
   }
   stages {
     stage('Status') {
       steps {
-        sh 'chmod +x properties.env'
-        sh '. ./properties.env'
-        sh '/usr/bin/python3 prog.py'
+        sh 'python --version'
       }
     }
   }

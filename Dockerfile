@@ -7,10 +7,11 @@ TEST_LIQUIBASE_DATABASE=test_liquibase \
 TEST_LIQUIBASE_USER=root \
 TEST_LIQUIBASE_PASS=root
 
-RUN mkdir -p /home
-RUN chown newuser /home
+USER root
+RUN mkdir -p /home/app
+RUN chown newuser /home/app
 USER newuser
 
-COPY prog.py /home
+COPY prog.py /home/app
 
-CMD ["python", "/home/prog.py"]
+CMD ["python", "/home/app/prog.py"]

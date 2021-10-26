@@ -1,16 +1,23 @@
-FROM python:3.9-alpine
-FROM liquibase/liquibase:4.4.2
+FROM kilna/liquibase-mysql
 
-ENV TEST_LIQUIBASE_URL=localhost \
-TEST_LIQUIBASE_PORT=3306 \
-TEST_LIQUIBASE_DATABASE=test_liquibase \
-TEST_LIQUIBASE_USER=root \
-TEST_LIQUIBASE_PASS=root
+ENV LIQUIBASE_HOST=127.0.0.1
 
-USER root
+ENV LIQUIBASE_PORT=3306
 
-WORKDIR /usr/local/bin
+ENV LIQUIBASE_DATABASE=test_liquibase
 
-COPY prog.py .
+ENV LIQUIBASE_USERNAME=root
 
-CMD ["prog.py"]
+ENV LIQUIBASE_PASSWORD=root
+
+ENV LIQUIBASE_CHANGELOG=changelog.xml
+
+ENV LIQUIBASE_LOGLEVEL=info
+
+ENV LIQUIBASE_CLASSPATH=/opt/jdbc/mysql-jdbc.jar
+
+ENV LIQUIBASE_DRIVER=com.mysql.jdbc.Driver
+ENV LIQUIBASE_URL=jdbc:mysql://${HOST}:${PORT}/${DATABASE}
+
+
+COPY changelog.xml /workspace

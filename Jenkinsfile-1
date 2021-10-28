@@ -12,7 +12,7 @@ pipeline {
     stage("run") {
       steps {
         sh """
-          docker run --network="host" test_liquibase_v liquibase updateSQL
+          docker run --network="host" test_liquibase_v liquibase update
         """
       }
     }

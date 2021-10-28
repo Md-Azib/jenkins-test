@@ -28,4 +28,4 @@ COPY changelog.xml /workspace
 
 COPY test_liquibase_1.sql /workspace
 
-COPY test_liquibase_1.sql /workspace
+COPY test_liquibase_2.sql /workspace

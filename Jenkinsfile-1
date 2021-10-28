@@ -5,14 +5,14 @@ pipeline {
     stage('build') {
       steps {
         sh """
-          docker build --tag liquibase_v20 .
+          docker build -t test_liquibase_v .
         """
       }
     }
     stage("run") {
       steps {
         sh """
-          docker run -d --network="host" liquibase_v20 liquibase updateTestingRollback
+          docker run -d --network="host" test_liquibase_v liquibase updateTestingRollback
         """
       }
     }

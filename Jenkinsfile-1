@@ -5,14 +5,14 @@ pipeline {
     stage('build') {
       steps {
         sh """
-          docker build --tag liquibase_v1 .
+          docker build --tag liquibase_v10 .
         """
       }
     }
     stage("run") {
       steps {
         sh """
-          docker run --rm liquibase_v1
+          docker run --rm liquibase_v10 sleep 1000
         """
       }
     }

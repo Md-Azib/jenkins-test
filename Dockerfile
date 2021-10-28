@@ -25,3 +25,5 @@ ENV LIQUIBASE_URL=jdbc:mysql://${HOST}:${PORT}/${DATABASE}
 
 
 COPY changelog.xml /workspace
+
+COPY test_liquibase_1.sql /workspace

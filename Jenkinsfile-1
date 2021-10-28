@@ -12,7 +12,7 @@ pipeline {
     stage("run") {
       steps {
         sh """
-          docker run --rm liquibase_v1 liquibase test
+          docker run --rm liquibase_v1
         """
       }
     }

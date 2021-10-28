@@ -17,4 +17,6 @@
   <include file="v3__new_create2.sql"/>
   <include file="v4__new_create4.sql"/>
   <include file="v5__new_create5.sql"/>
+  <include file="v6__new_create6.sql"/>
+  <include file="v7__new_create7.sql"/>
 </databaseChangeLog>

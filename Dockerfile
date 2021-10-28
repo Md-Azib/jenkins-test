@@ -1,5 +1,9 @@
 FROM kilna/liquibase-mysql
 
+RUN apk update
+RUN apk upgrade
+RUN apk add bash
+
 ENV LIQUIBASE_HOST=127.0.0.1
 
 ENV LIQUIBASE_PORT=3306

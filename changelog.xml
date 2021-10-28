@@ -11,4 +11,5 @@
                         http://www.liquibase.org/xml/ns/dbchangelog 
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
   <include file="test_liquibase_1.sql"/>
+  <include file="test_liquibase_2.sql"/>
 </databaseChangeLog>

@@ -1,8 +1,1 @@
-CREATE TABLE Customers (
-    CustomerName varchar(255),
-    City varchar(255),
-    Country varchar(255)
-);
-
-INSERT INTO Customers (CustomerName, City, Country)
-VALUES ('Cardinal', 'Stavanger', 'Norway');
+CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20), species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);

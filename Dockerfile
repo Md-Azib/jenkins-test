@@ -21,9 +21,11 @@ ENV LIQUIBASE_LOGLEVEL=info
 ENV LIQUIBASE_CLASSPATH=/opt/jdbc/mysql-jdbc.jar
 
 ENV LIQUIBASE_DRIVER=com.mysql.jdbc.Driver
-ENV LIQUIBASE_URL=jdbc:mysql://${HOST}:${PORT}/${DATABASE}
 
+ENV LIQUIBASE_URL=jdbc:mysql://${LIQUIBASE_HOST}:${LIQUIBASE_PORT}/${LIQUIBASE_DATABASE}
 
 COPY changelog.xml /workspace
+
+COPY test_liquibase_1.sql /workspace
 
 COPY test_liquibase_1.sql /workspace

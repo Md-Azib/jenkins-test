@@ -15,4 +15,5 @@
   <include file="test_liquibase_3.sql"/>
   <include file="v2__new_create.sql"/>
   <include file="v3__new_create2.sql"/>
+  <include file="v4__new_create4.sql"/>
 </databaseChangeLog>

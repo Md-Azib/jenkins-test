@@ -1,0 +1,1 @@
+INSERT into newt VALUES("GHI", "JKL");

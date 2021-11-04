@@ -1,0 +1,1 @@
+INSERT into newt VALUES("PQR", "XYZ");

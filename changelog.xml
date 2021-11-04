@@ -21,4 +21,5 @@
   <include file="v7__new_create7.sql"/>
   <include file="v8__new_create8.sql"/>
   <include file="v9__new_create9.sql"/>
+  <include file="v10__new_create10.sql"/>
 </databaseChangeLog>

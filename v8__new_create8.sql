@@ -1,0 +1,1 @@
+CREATE TABLE newt (name VARCHAR(20), owner VARCHAR(20));

@@ -22,4 +22,5 @@
   <include file="v8__new_create8.sql"/>
   <include file="v9__new_create9.sql"/>
   <include file="v10__new_create10.sql"/>
+  <include file="v11_new_table_tommy.sql"/>
 </databaseChangeLog>

@@ -8,7 +8,7 @@ COPY prog.py /etc/workspace
 
 WORKDIR /etc/workspace
 
-ARG JENKINS_PARAM
+ENV JENKINS_PARAM=${JENKINS_PARAM}
 
 RUN echo JENKINS_PARAM
 

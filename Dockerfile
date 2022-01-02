@@ -8,8 +8,8 @@ COPY prog.py /etc/workspace
 
 WORKDIR /etc/workspace
 
-ENV param1 ${jenkinsParam}
+ARG JENKINS_PARAM
 
-RUN echo ${param1}
+RUN echo JENKINS_PARAM
 
 CMD ["python", "./prog.py"]

@@ -4,9 +4,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        script{
-          def repo=docker.build("test_liquibase_v","--build-arg jenkinsParam=$jenkinsParam --no-cache .")
-        }
+        sh """
+          docker build -t test_liquibase_v --build-arg JENKINS_PARAM="${jenkinsParam}" .
+        """
       }
     }
     stage("run") {

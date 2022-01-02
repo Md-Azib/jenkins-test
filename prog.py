@@ -7,6 +7,7 @@ import os
 # Reduce human error
 
 print("Hi! from python")
+print("All env variables : ", os.environ)
 
 def validate_single_db():
     pass

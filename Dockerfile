@@ -7,8 +7,9 @@ ADD migrations/ /etc/workspace
 COPY prog.py /etc/workspace
 
 WORKDIR /etc/workspace
-RUN echo $jenkinsParam
 
 ENV param1 ${jenkinsParam}
+
+RUN echo ${param1}
 
 CMD ["python", "./prog.py"]

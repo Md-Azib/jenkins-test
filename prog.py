@@ -25,6 +25,8 @@ def apply_migrations():
     print("Path is : ", full_path)
     os.chdir(full_path)
     os.system('ls -l')
+    os.system('docker build -t test_liquibase_v1 .')
+    os.system('docker run --rm --network="host" test_liquibase_v1 liquibase update')
 
 
 

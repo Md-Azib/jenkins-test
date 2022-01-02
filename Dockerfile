@@ -1,29 +1,13 @@
-FROM kilna/liquibase-mysql
+FROM python:3.9
 
-RUN apk update
-RUN apk upgrade
-RUN apk add bash
+RUN mkdir -p /etc/workspace
 
-ENV LIQUIBASE_HOST=127.0.0.1
+ADD migrations/ /etc/workspace
 
-ENV LIQUIBASE_PORT=3306
+COPY prog.py /etc/workspace
 
-ENV LIQUIBASE_DATABASE=test_liquibase
+WORKDIR /etc/workspace
 
-ENV LIQUIBASE_USERNAME=root
+ENV param1 ${jenkinsParam}
 
-ENV LIQUIBASE_PASSWORD=root
-
-ENV LIQUIBASE_CHANGELOG=changelog.xml
-
-ENV LIQUIBASE_LOGLEVEL=info
-
-ENV LIQUIBASE_CLASSPATH=/opt/jdbc/mysql-jdbc.jar
-
-ENV LIQUIBASE_DRIVER=com.mysql.jdbc.Driver
-
-ENV LIQUIBASE_URL=jdbc:mysql://${LIQUIBASE_HOST}:${LIQUIBASE_PORT}/${LIQUIBASE_DATABASE}
-
-COPY changelog.xml /workspace
-
-COPY *.sql /workspace
+CMD ["python", "./prog.py"]

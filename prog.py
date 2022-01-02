@@ -9,7 +9,21 @@ import os
 print("Hi! from python")
 print("All env variables : ", os.environ)
 
+TEAM_NAME = os.environ.get("TEAM_NAME_VALUE")
+DB_NAME = os.environ.get("DB_NAME_VALUE")
+BASE_LOCATION = os.getcwd()
+MIGRATION_DIR = 'migrations'
+
+def get_full_path():
+    return os.path.join(BASE_LOCATION, MIGRATION_DIR, TEAM_NAME, DB_NAME)
+
 def validate_single_db():
     pass
 
+def apply_migrations():
+    full_path = get_full_path()
+    print("Path is : ", full_path)
 
+
+
+apply_migrations

@@ -15,7 +15,7 @@ BASE_LOCATION = os.getcwd()
 MIGRATION_DIR = 'migrations'
 
 def get_full_path():
-    return os.path.join(BASE_LOCATION, MIGRATION_DIR, TEAM_NAME, DB_NAME)
+    return os.path.join(BASE_LOCATION, TEAM_NAME, DB_NAME)
 
 def validate_single_db():
     pass

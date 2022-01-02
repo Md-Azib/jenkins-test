@@ -7,7 +7,7 @@ ADD migrations/ /etc/workspace
 COPY prog.py /etc/workspace
 
 WORKDIR /etc/workspace
-RUN echo "$jenkinsParam"
+RUN echo $jenkinsParam
 
 ENV param1 ${jenkinsParam}
 

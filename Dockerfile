@@ -1,8 +1,8 @@
 FROM python:3.9
 
-RUN mkdir -p /etc/workspace
+RUN mkdir -p /etc/workspace/migrations
 
-ADD migrations/ /etc/workspace
+ADD migrations/ /etc/workspace/migrations
 
 COPY prog.py /etc/workspace
 

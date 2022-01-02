@@ -26,4 +26,4 @@ def apply_migrations():
 
 
 
-apply_migrations
+apply_migrations()

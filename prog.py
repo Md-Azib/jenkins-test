@@ -23,6 +23,9 @@ def validate_single_db():
 def apply_migrations():
     full_path = get_full_path()
     print("Path is : ", full_path)
+    os.chdir(full_path)
+    os.system('ls -l')
+
 
 
 

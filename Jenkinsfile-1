@@ -5,7 +5,7 @@ pipeline {
     stage('build') {
       steps {
         sh """
-          docker build -t test_liquibase_v --build-arg JENKINS_PARAM="${jenkinsParam}" .
+          docker build -t test_liquibase_v --build-arg TEAM_NAME="${teamName}" --build-arg DB_NAME="${dbName}" .
         """
       }
     }

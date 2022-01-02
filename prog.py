@@ -26,7 +26,7 @@ def apply_migrations():
     os.chdir(full_path)
     os.system('ls -l')
     os.system('docker build -t test_liquibase_v1 .')
-    os.system('docker run -v /var/run/docker.sock:/var/run/docker.sock --rm --network="host" test_liquibase_v1 liquibase update')
+    os.system('docker run --rm --network="host" test_liquibase_v1 liquibase update')
 
 
 
